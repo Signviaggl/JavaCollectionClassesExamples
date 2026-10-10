@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/DequeExample.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/DequeExample.java" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="import java.util.ArrayDeque;&#10;import java.util.Deque;&#10;&#10;public class DequeExample {&#10;    public static void run() {&#10;        System.out.println(&quot;DequeExample:&quot;);&#10;        Deque&lt;String&gt; deque = new ArrayDeque&lt;&gt;();&#10;&#10;        deque.addFirst(&quot;front&quot;);&#10;        deque.addLast(&quot;back&quot;);&#10;&#10;        System.out.println(deque);&#10;        System.out.println(deque.removeFirst());&#10;        System.out.println(deque.removeLast());&#10;        System.out.println();&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/LinkedHashSetExample.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/LinkedHashSetExample.java" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="import java.util.LinkedHashSet;&#10;import java.util.Set;&#10;&#10;public class LinkedHashSetExample {&#10;    public static void run() {&#10;        System.out.println(&quot;LinkedHashSetExample:&quot;);&#10;        Set&lt;String&gt; names = new LinkedHashSet&lt;&gt;();&#10;&#10;        names.add(&quot;Charlie&quot;);&#10;        names.add(&quot;Alice&quot;);&#10;        names.add(&quot;Bob&quot;);&#10;&#10;        System.out.println(names);&#10;        System.out.println();&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/QueueExample.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/QueueExample.java" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="import java.util.LinkedList;&#10;import java.util.Queue;&#10;&#10;public class QueueExample {&#10;    public static void run() {&#10;        System.out.println(&quot;QueueExample:&quot;);&#10;        Queue&lt;String&gt; queue = new LinkedList&lt;&gt;();&#10;&#10;        queue.offer(&quot;A&quot;);&#10;        queue.offer(&quot;B&quot;);&#10;        queue.offer(&quot;C&quot;);&#10;&#10;        System.out.println(queue.poll());&#10;        System.out.println(queue.poll());&#10;        System.out.println(queue);&#10;        System.out.println();&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/SetExample.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/SetExample.java" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="import java.util.HashSet;&#10;import java.util.Set;&#10;&#10;public class SetExample {&#10;    public static void run() {&#10;        System.out.println(&quot;SetExample:&quot;);&#10;        Set&lt;String&gt; names = new HashSet&lt;&gt;();&#10;&#10;        names.add(&quot;Alice&quot;);&#10;        names.add(&quot;Bob&quot;);&#10;        names.add(&quot;Alice&quot;);&#10;&#10;        System.out.println(names);&#10;        System.out.println();&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/TreeSetExample.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/TreeSetExample.java" />
+              <option name="newFile" value="true" />
+              <option name="updatedContent" value="import java.util.Set;&#10;import java.util.TreeSet;&#10;&#10;public class TreeSetExample {&#10;    public static void run() {&#10;        System.out.println(&quot;TreeSetExample:&quot;);&#10;        Set&lt;Integer&gt; numbers = new TreeSet&lt;&gt;();&#10;&#10;        numbers.add(10);&#10;        numbers.add(3);&#10;        numbers.add(7);&#10;&#10;        System.out.println(numbers);&#10;        System.out.println();&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
