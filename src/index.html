@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Integer Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f2fe, #fdf2f8, #dbeafe);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .input-group {
+            display: grid;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        input {
+            padding: 12px 14px;
+            font-size: 16px;
+            border: 2px solid #cbd5e1;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4f46e5;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 16px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 14px;
+            line-height: 1.8;
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Integer Calculator</h2>
+
+    <div class="input-group">
+        <input type="text" id="num1" placeholder="Enter first integer" inputmode="numeric" />
+        <input type="text" id="num2" placeholder="Enter second integer" inputmode="numeric" />
+    </div>
+
+    <button id="calculateBtn">Calculate</button>
+
+    <div class="result" id="resultBox">
+        Result will appear here.
+    </div>
+</div>
+
+<script>
+    function cleanIntegerInput(value) {
+        // Keep only digits and one optional leading minus
+        let cleaned = value.replace(/[^0-9-]/g, "");
+
+        if (cleaned.includes("-")) {
+            cleaned = cleaned.replace(/-/g, "");
+            if (value.startsWith("-")) cleaned = "-" + cleaned;
+        }
+
+        // Prevent multiple leading minus signs
+        if (cleaned.indexOf("-") > 0) {
+            cleaned = cleaned.replace(/-/g, "");
+        }
+
+        return cleaned;
+    }
+
+    function attachIntegerValidation(input) {
+        input.addEventListener("input", function () {
+            const cleaned = cleanIntegerInput(this.value);
+            this.value = cleaned;
+        });
+    }
+
+    attachIntegerValidation(document.getElementById("num1"));
+    attachIntegerValidation(document.getElementById("num2"));
+
+    document.getElementById("calculateBtn").addEventListener("click", function () {
+        const n1 = document.getElementById("num1").value.trim();
+        const n2 = document.getElementById("num2").value.trim();
+
+        if (n1 === "" || n2 === "") {
+            document.getElementById("resultBox").textContent = "Please enter both integers.";
+            return;
+        }
+
+        const a = Number(n1);
+        const b = Number(n2);
+
+        if (!Number.isInteger(a) || !Number.isInteger(b)) {
+            document.getElementById("resultBox").textContent = "Only integers are allowed.";
+            return;
+        }
+
+        const sum = a + b;
+        const average = (a + b) / 2;
+        const product = a * b;
+
+        document.getElementById("resultBox").innerHTML = `
+        Sum: ${sum}<br>
+        Average: ${average}<br>
+        Product: ${product}
+      `;
+    });
+</script>
+</body>
+</html>
